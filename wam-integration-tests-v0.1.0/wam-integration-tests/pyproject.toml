@@ -1,0 +1,10 @@
+[project]
+name = "wam-integration-tests"
+version = "0.1.0"
+description = "Privacy-oriented WAM ecosystem integration tests using disposable regtest nodes"
+requires-python = ">=3.11"
+dependencies = []
+license = {text = "MIT"}
+
+[tool.wam-integration-tests]
+execution = "Run from the repository root; no pip install required"

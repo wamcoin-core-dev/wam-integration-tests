@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WAM Pay · Merchant desk</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="/"><span class="mark">W</span> WAM <strong>Pay</strong></a><span class="version">LOCAL MERCHANT DESK · v0.1.0</span><button id="logout" class="quiet" hidden>Khóa màn hình</button></header>
+  <main>
+    <section id="login" class="login panel">
+      <p class="eyebrow">YOUR NODE. YOUR PAYMENTS.</p>
+      <h1>Nhận WAM.<br>Theo dõi rõ ràng.</h1>
+      <p class="muted">Tạo hóa đơn và kiểm tra thanh toán qua node của anh.</p>
+      <form id="login-form"><label for="token">API token</label><input id="token" type="password" autocomplete="off" required placeholder="WAM_PAY_API_TOKEN"><button>Mở bảng điều khiển <span>→</span></button></form>
+      <p class="small muted">Token chỉ giữ trong bộ nhớ của tab. Tải lại trang để đăng nhập lại.</p>
+    </section>
+    <div id="dashboard" hidden>
+      <section class="heading"><div><p class="eyebrow">PAYMENT OPERATIONS</p><h1>Bảng thanh toán</h1></div><div class="sync"><span id="mode" class="badge">—</span><p id="node-state">Đang kiểm tra…</p><small id="sync-time"></small></div></section>
+      <p id="demo-banner" class="banner" hidden>CHẾ ĐỘ DEMO · Địa chỉ và giao dịch mô phỏng. Không gửi WAM thật.</p>
+      <div class="workspace">
+        <section class="panel create"><p class="eyebrow">01 / CREATE</p><h2>Hóa đơn mới</h2><form id="invoice-form">
+          <label for="amount">Số tiền <span>WAM</span></label><input id="amount" type="text" inputmode="decimal" placeholder="10.00000000" required maxlength="17">
+          <label for="memo">Nội dung</label><input id="memo" maxlength="240" placeholder="Ví dụ: Đơn hàng #001">
+          <label for="ttl">Thời hạn thanh toán</label><select id="ttl"><option value="1800">30 phút</option><option value="3600">1 giờ</option><option value="86400">24 giờ</option></select>
+          <button id="create-button">Tạo địa chỉ nhận <span>+</span></button>
+        </form><p class="small muted">Mỗi hóa đơn dùng một địa chỉ riêng. Số tiền có tối đa 8 chữ số thập phân.</p></section>
+        <section class="panel ledger"><div class="section-title"><div><p class="eyebrow">02 / MONITOR</p><h2>Hóa đơn</h2></div><button id="refresh" class="quiet">Làm mới</button></div><div id="empty" class="empty">Chưa có hóa đơn.<br><span>Tạo hóa đơn đầu tiên để bắt đầu.</span></div><div class="table-wrap"><table id="invoice-table" hidden><thead><tr><th>Nội dung</th><th>Số tiền</th><th>Trạng thái</th><th></th></tr></thead><tbody id="rows"></tbody></table></div><div class="pagination"><button id="prev" class="quiet" disabled>← Trước</button><span id="page">1</span><button id="next" class="quiet" disabled>Sau →</button></div></section>
+      </div>
+      <section id="detail" class="panel detail" hidden><div class="section-title"><div><p class="eyebrow">03 / INSPECT</p><h2 id="detail-title"></h2></div><span id="detail-state" class="badge"></span></div><p id="detail-warning" class="banner"></p><div class="detail-grid"><div><label>Địa chỉ nhận</label><code id="address"></code><button id="copy-address" class="quiet">Sao chép địa chỉ</button><p class="small muted" id="invoice-meta"></p></div><div class="totals"><div>Yêu cầu<strong id="due"></strong></div><div>Đã thấy<strong id="received"></strong></div><div>Đủ xác nhận<strong id="confirmed"></strong></div><div>Trả dư (đã xác nhận)<strong id="overpaid"></strong></div></div></div><div id="demo-controls" hidden><h3>Mô phỏng giao dịch</h3><form id="demo-form" class="demo-form"><input id="demo-amount" aria-label="Số tiền mô phỏng" inputmode="decimal" placeholder="Số WAM" required><select id="demo-confirmations" aria-label="Số xác nhận"><option value="0">0 xác nhận</option><option value="6">6 xác nhận</option></select><button>Thêm thanh toán</button></form><p class="small muted">Dùng nút ở giao dịch để xác nhận hoặc mô phỏng giao dịch bị loại.</p></div><h3>Giao dịch</h3><div id="payments"></div></section>
+    </div>
+    <p id="notice" role="status" aria-live="polite"></p>
+  </main>
+  <footer><span>WAM PAY</span><span>Community prototype · Node-backed invoice monitoring</span></footer>
+</body>
+</html>

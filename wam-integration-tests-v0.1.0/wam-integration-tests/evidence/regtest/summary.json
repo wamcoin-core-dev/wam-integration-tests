@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "suite_version": "0.1.0",
+  "profile": "regtest",
+  "verdict": "fail",
+  "run_error": null,
+  "target_binary_sha256": "625609c08afef441e9dddd71330dcab1cec112d6fabe361769b9907f0efe7ab4",
+  "counts": {
+    "pass": 27,
+    "fail": 4,
+    "error": 0,
+    "not_run": 0
+  },
+  "cases": [
+    {
+      "id": "CORE-001",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-002",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-003",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-004",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-005",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-006",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-007",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-008",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-009",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-010",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "CORE-011",
+      "status": "fail",
+      "code": "ASSERTION_FAILED"
+    },
+    {
+      "id": "PAY-001",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-002",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-003",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-004",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-005",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-006",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-007",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-008",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-009",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-010",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-011",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-012",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-013",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "PAY-014",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "WT-001",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "WT-002",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "WT-003",
+      "status": "fail",
+      "code": "ASSERTION_FAILED"
+    },
+    {
+      "id": "WT-004",
+      "status": "fail",
+      "code": "ASSERTION_FAILED"
+    },
+    {
+      "id": "WT-005",
+      "status": "fail",
+      "code": "ASSERTION_FAILED"
+    },
+    {
+      "id": "WT-006",
+      "status": "pass",
+      "code": ""
+    }
+  ]
+}

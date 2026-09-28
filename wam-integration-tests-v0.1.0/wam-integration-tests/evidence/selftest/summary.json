@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "suite_version": "0.1.0",
+  "profile": "selftest",
+  "verdict": "pass",
+  "run_error": null,
+  "target_binary_sha256": null,
+  "counts": {
+    "pass": 29,
+    "fail": 0,
+    "error": 0,
+    "not_run": 0
+  },
+  "cases": [
+    {
+      "id": "RPC-001",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-002",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-003",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-004",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-005",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-006",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-007",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-008",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-009",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-010",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-011",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-012",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-013",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-014",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-015",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-016",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-017",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "RPC-018",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-001",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-002",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-003",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-004",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-005",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-006",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-007",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-008",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-009",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-010",
+      "status": "pass",
+      "code": ""
+    },
+    {
+      "id": "SAFE-011",
+      "status": "pass",
+      "code": ""
+    }
+  ]
+}
