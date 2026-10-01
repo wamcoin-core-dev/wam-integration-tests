@@ -15,12 +15,41 @@ this account reads as endorsed, and somebody acts on that.
 
 ## What has been read, and what has not
 
-**Nothing.** This repository has not been read at all. It is listed here with
-the others so that it is not mistaken for the reviewed one.
+Read on 2026-10-01, by one person, by eye. Not an audit, and it has not been
+run.
 
-A test suite is read for a particular reason: a test that passes while
-asserting nothing is worse than a missing test, because it reports health
-that was never measured. That is what a review of this should look for first.
+A test suite is read for one reason before any other: a test that passes while
+asserting nothing is worse than a missing test, because it reports health that
+was never measured. Checked first, and it is fine. There is no `assert`
+anywhere in the scenarios, which looked alarming and is the opposite -- they
+call `require()`, which raises, and `python -O` strips `assert` while it
+cannot strip a function call. That is a deliberate choice and the right one.
+
+**Thirty cases**, all on regtest, and these are the ones that matter to the
+chain rather than to the application:
+
+* `CORE-007` the mined coinbase pays the consensus treasury amount, in exact
+  decimals
+* `CORE-009` supply reporting stays under the 22,000,000 cap, and the premine
+  is exactly 2,000,000
+* `CORE-010` two isolated branches converge on the longer valid one
+* `CORE-001` both nodes are on the pinned chain and the genesis hash matches
+* `CORE-002` an unauthenticated RPC request is refused with 401
+* `CORE-003` every observed peer is local and no public address is advertised
+* `CORE-008` the datadir and the cookie are owner-only
+
+And the application ones are not shallow either: `PAY-005` partial payment and
+overpayment reconcile without double counting, `PAY-006` invalidating a paid
+block revokes fulfilment, `PAY-009` a forged Host or cross-origin request is
+refused even with a valid token, `PAY-011` an upstream error carrying a secret
+cannot reach an API response or a log, `PAY-014` the payment server refuses to
+create an invoice if its own genesis pin is wrong. `WT-002` holds the
+watchtower to only the read-only RPC calls it declares.
+
+**Not read:** the harness itself (`wam_it/`), the packaging scripts, and the
+commit history that arrived with the transfer. **Not done:** nobody has run
+it. A suite that is correct on the page and broken in its runner reports
+nothing, which is the same failure one level up.
 
 ## Where the review is happening
 
